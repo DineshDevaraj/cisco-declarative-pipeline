@@ -23,7 +23,7 @@ pipeline {
                         ]
                     )
                     
-                    if (operation == "Add" or operation == "Update") {
+                    if (operation == "Add" || operation == "Update") {
                         
                         def username = input(
                             message:'enter the field name and value', 
