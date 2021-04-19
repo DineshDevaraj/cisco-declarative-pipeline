@@ -1,9 +1,9 @@
 pipeline {
     agent any 
     stages {
-        stage('Stage 1') {
+        stage('get-email') {
             steps {
-                echo 'Hello world!' 
+                input("enter the username")
             }
         }
     }
