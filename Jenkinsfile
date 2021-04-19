@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     stages {
-        stage('get-email') {
+        stage('get-contacts') {
             steps {
                 script {
                     def username = input(message:'enter the username', parameters:[string(name:'username')])
