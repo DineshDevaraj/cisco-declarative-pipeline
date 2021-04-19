@@ -5,8 +5,8 @@ pipeline {
             steps {
                 input("click proceed if you are ready")
                 script {
-                    def username = input(message:"enter the username")
-                    print("username is ${username}")
+                     input(id:'userInput', message:'enter the username', parameters:[string(name:'username')])
+                    print("username is ${userInput.username}")
                 }
             }
         }
