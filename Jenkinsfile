@@ -5,7 +5,7 @@ pipeline {
             steps {
                 input("click proceed if you are ready")
                 script {
-                    def username = input("enter the username")
+                    def username = input(message:"enter the username")
                     print("username is ${username}"
                 }
             }
