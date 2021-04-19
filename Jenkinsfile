@@ -25,7 +25,7 @@ pipeline {
                     
                     if (operation == "Add" || operation == "Update") {
                         
-                        def username = input(
+                        def fieldRecord = input(
                             message:'enter the field name and value', 
                             parameters:[
                                 string(name:'fieldname'),
@@ -34,7 +34,7 @@ pipeline {
                         )
                         
                         def response = sh(
-                            script:"python3 /home/dinesh/programs/python/get-contact.py ${operation} ${username} ${fieldname} ${fieldvalue}", 
+                            script:"python3 /home/dinesh/programs/python/get-contact.py ${operation} ${username} ${fieldRecord.fieldname} ${fieldRecord.fieldvalue}", 
                             returnStdout:true
                         )
                         
