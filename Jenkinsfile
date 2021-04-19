@@ -3,7 +3,10 @@ pipeline {
     stages {
         stage('get-email') {
             steps {
-                input("enter the username")
+                input("click proceed if you are ready")
+                script {
+                    def username = input("enter the username")
+                }
             }
         }
     }
