@@ -1,2 +1,2 @@
-# cisco-declarative-pipeline
-Learning declarative pipeline
+# cisco-pipeline-script
+Learning Jenkins pipeline
