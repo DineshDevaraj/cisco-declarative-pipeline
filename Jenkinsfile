@@ -23,6 +23,8 @@ pipeline {
                         ]
                     )
                     
+                    def response = ""
+                    
                     if (operation == "Add" || operation == "Update") {
                         
                         def fieldRecord = input(
@@ -33,14 +35,14 @@ pipeline {
                             ]
                         )
                         
-                        def response = sh(
+                        response = sh(
                             script:"python3 /home/dinesh/programs/python/get-contact.py ${operation} ${username} ${fieldRecord.fieldname} ${fieldRecord.fieldvalue}", 
                             returnStdout:true
                         )
                         
                     } else {
                         
-                        def response = sh(
+                        response = sh(
                             script:"python3 /home/dinesh/programs/python/get-contact.py ${operation} ${username}", 
                             returnStdout:true
                         )
