@@ -6,7 +6,7 @@ pipeline {
                 input("click proceed if you are ready")
                 script {
                     def username = input(message:"enter the username")
-                    print("username is ${username}"
+                    print("username is ${username}")
                 }
             }
         }
