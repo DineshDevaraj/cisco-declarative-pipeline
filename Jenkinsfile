@@ -84,18 +84,15 @@ pipeline {
                             )
                                   
                         } else {
-                            
-                            /* remove } at the end */
-                            value = value.split('}')[0]
-                            value = value.trim()
-                            
+                                                        
                             input(message:
                                 "message \n" +
                                 "--------------------------------------- \n" +
-                                value + "\n" +
+                                value + 
                                 "--------------------------------------- \n" +
                                 "click proceed to finish build"
                             )
+                            
                         }
 
                     }
