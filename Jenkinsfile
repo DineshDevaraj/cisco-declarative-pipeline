@@ -86,7 +86,7 @@ pipeline {
                         } else {
                             
                             input(message:
-                                "error message \n" +
+                                "message \n" +
                                 "--------------------------------------- \n" +
                                 value +
                                 "--------------------------------------- \n" +
