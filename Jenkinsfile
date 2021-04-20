@@ -87,11 +87,12 @@ pipeline {
                             
                             /* remove } at the end */
                             value = value.split('}')[0]
+                            value = value.trim()
                             
                             input(message:
                                 "message \n" +
                                 "--------------------------------------- \n" +
-                                value +
+                                value + "\n" +
                                 "--------------------------------------- \n" +
                                 "click proceed to finish build"
                             )
