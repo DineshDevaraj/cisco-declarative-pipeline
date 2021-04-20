@@ -4,7 +4,7 @@ pipeline {
 
     stages {
 
-        stage('get contact details') {
+        stage('contact details manager') {
 
             steps {
 
