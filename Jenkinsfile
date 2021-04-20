@@ -82,13 +82,6 @@ pipeline {
                                 "--------------------------------------------- \n" +
                                 "click proceed to finish build"
                             )
-                            
-                            print(
-                                "contact details for ${username} are \n" +
-                                "    emailId: ${emailId}\n" +
-                                "    mobile: ${mobile}\n" +
-                                "    work:${work}"
-                            )
                                   
                         } else {
                             
