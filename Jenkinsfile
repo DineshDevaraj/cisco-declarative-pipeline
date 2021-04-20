@@ -75,7 +75,7 @@ pipeline {
                             
                             input(
                                 message:"contact details for ${username} are \n" +
-                                "emailId: ${emailId}, mobile: ${mobile} & work:${work}"
+                                "emailId: ${emailId}\n mobile: ${mobile}\n work:${work}"
                             )
                             
                             print(
