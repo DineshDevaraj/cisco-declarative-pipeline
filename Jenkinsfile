@@ -13,7 +13,7 @@ pipeline {
                     def username = null
                     stage('enter the username') {
 
-                        def username = input(
+                        username = input(
                             message:'enter the username',
                             parameters:[
                                 string(name:'username')
@@ -24,7 +24,7 @@ pipeline {
                     def operation = null
                     stage('choose the operation') {
 
-                        def operation = input(
+                        operation = input(
                             message: "Choose the operation",
                             parameters: [
                                 [
