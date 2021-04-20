@@ -85,6 +85,9 @@ pipeline {
                                   
                         } else {
                             
+                            /* remove } at the end */
+                            value = value.split('}')[0]
+                            
                             input(message:
                                 "message \n" +
                                 "--------------------------------------- \n" +
