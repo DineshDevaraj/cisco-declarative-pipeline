@@ -78,15 +78,17 @@ pipeline {
                                 "--------------------------------------------- \n" +
                                 "emailId: ${emailId}\n" +
                                 "mobile: ${mobile}\n" +
-                                "work:${work}\n" +
+                                "work:${work}" +
                                 "--------------------------------------------- \n" +
                                 "click proceed to finish build"
                             )
                             
                             print(
                                 "contact details for ${username} are \n" +
-                                "emailId : ${emailId}, mobile : ${mobile} & work : ${work}"
-                             )
+                                "    emailId: ${emailId}\n" +
+                                "    mobile: ${mobile}\n" +
+                                "    work:${work}"
+                            )
                                   
                         } else {
                             
