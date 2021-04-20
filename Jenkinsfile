@@ -64,10 +64,9 @@ pipeline {
                         }
 
                     }
-
+                    
+                    import groovy.json.JsonSlurper
                     stage('process response') {
-
-                        import groovy.json.JsonSlurper
 
                         def slurper = new JsonSlurper()
                         def jsonObj = slurper.parseText(response)
