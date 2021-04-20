@@ -67,7 +67,7 @@ pipeline {
 
                     stage('process response') {
 
-                        print(respponse)
+                        print(response)
                         def (key, value) = response.split(":")
 
                         if (key == "result") {
