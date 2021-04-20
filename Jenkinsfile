@@ -75,7 +75,7 @@ pipeline {
                             
                             input(message:
                                 "contact details for ${username} are \n" +
-                                "----------------------------------- \n"
+                                "----------------------------------- \n" +
                                 "emailId: ${emailId}\n" +
                                 "mobile: ${mobile}\n" +
                                 "work:${work}"
