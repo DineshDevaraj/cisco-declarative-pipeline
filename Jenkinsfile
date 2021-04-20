@@ -67,10 +67,12 @@ pipeline {
 
                     stage('process response') {
 
+                        print(respponse)
                         def (key, value) = response.split(":")
 
                         if (key == "result") {
                             
+                            print(value)
                             def (emailId, mobile, work) = value.split(";")
                             
                             input(message:
