@@ -63,30 +63,40 @@ pipeline {
 
                         }
 
-					}
+                    }
 
-					stage('process response') {
+                    stage('process response') {
 
-						def (key, value) = response.split(":")
+                        def (key, value) = response.split(":")
 
-						if (key == "result") {
-							def (emailId, mobile, work) = value.split(";")
-							print("contact details for ${username} is ")
-							print("emailId : ${emailId}")
-							print("mobile : ${mobile}")
-							print("work : ${work}")
-						} else {
-							print(value)
-						}
+                        if (key == "result") {
+                            
+                            def (emailId, mobile, work) = value.split(";")
+                            
+                            input(
+                                message:"contact details for ${username} are \n" +
+                                "emailId: ${emailId}, mobile: ${mobile} & work:${work}"
+                            )
+                            
+                            print(
+                                "contact details for ${username} are \n" +
+                                "emailId : ${emailId}, mobile : ${mobile} & work : ${work}"
+                             )
+                                  
+                        } else {
+                            
+                            print(value)
+                            
+                        }
 
-					}
+                    }
 
-				} /* script end */
+                } /* script end */
 
-			} /* steps end */
+            } /* steps end */
 
-		} /* get contact details end */
+        } /* get contact details end */
 
-	} /* stages end */
+    } /* stages end */
 
 } /* pipeline end */
