@@ -69,6 +69,7 @@ pipeline {
                     
                     stage('process response') {
 
+                        print(response)
                         def slurper = new JsonSlurper()
                         def jsonObj = slurper.parseText(response)
                         def value = jsonObj.values[0]
