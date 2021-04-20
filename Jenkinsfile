@@ -73,9 +73,12 @@ pipeline {
                             
                             def (emailId, mobile, work) = value.split(";")
                             
-                            input(
-                                message:"contact details for ${username} are \n" +
-                                "emailId: ${emailId}\n mobile: ${mobile}\n work:${work}"
+                            input(message:
+                                "contact details for ${username} are \n" +
+                                "----------------------------------- \n"
+                                "emailId: ${emailId}\n" +
+                                "mobile: ${mobile}\n" +
+                                "work:${work}"
                             )
                             
                             print(
