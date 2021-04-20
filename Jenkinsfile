@@ -85,8 +85,13 @@ pipeline {
                                   
                         } else {
                             
-                            print(value)
-                            
+                            input(message:
+                                "error message \n" +
+                                "--------------------------------------- \n" +
+                                value +
+                                "--------------------------------------- \n" +
+                                "click proceed to finish build"
+                            )
                         }
 
                     }
