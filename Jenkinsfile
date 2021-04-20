@@ -67,9 +67,13 @@ pipeline {
 
                     stage('process response') {
 
-                        def (key, value) = response.split(":")
+                        import groovy.json.JsonSlurper
 
-                        if (key == "result") {
+                        def slurper = new JsonSlurper()
+                        def jsonObj = slurper.parseText(response)
+                        def value = jsonObj.values[0]
+
+                        if (jsonObj.containsKey("result")) {
                             
                             def (emailId, mobile, work) = value.split(";")
                             
@@ -85,10 +89,6 @@ pipeline {
                                   
                         } else {
                             
-                            /* remove } at the end */
-                            value = value.split('}')[0]
-                            value = value.trim()
-                            
                             input(message:
                                 "message \n" +
                                 "--------------------------------------- \n" +
@@ -96,6 +96,7 @@ pipeline {
                                 "--------------------------------------- \n" +
                                 "click proceed to finish build"
                             )
+                            
                         }
 
                     }
