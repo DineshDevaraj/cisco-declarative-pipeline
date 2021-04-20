@@ -83,7 +83,7 @@ pipeline {
                                 "--------------------------------------------- \n" +
                                 "emailId: ${emailId}\n" +
                                 "mobile: ${mobile}\n" +
-                                "work:${work}" +
+                                "work:${work}\n" +
                                 "--------------------------------------------- \n" +
                                 "click proceed to finish build"
                             )
