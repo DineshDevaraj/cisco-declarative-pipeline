@@ -72,7 +72,7 @@ pipeline {
                         print(response)
                         def slurper = new JsonSlurper()
                         def jsonObj = slurper.parseText(response)
-                        def value = jsonObj.values[0]
+                        def value = jsonObj.values()[0]
 
                         if (jsonObj.containsKey("result")) {
                             
