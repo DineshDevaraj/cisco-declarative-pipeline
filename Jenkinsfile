@@ -99,8 +99,10 @@ pipeline {
                             )
                             
                         }
+                        
+                        print("process response end")
 
-                    }
+                    } /* process response end */
 
                 } /* script end */
 
