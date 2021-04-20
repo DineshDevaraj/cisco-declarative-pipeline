@@ -1,3 +1,5 @@
+import groovy.json.JsonSlurper
+
 pipeline {
 
     agent any
@@ -65,7 +67,6 @@ pipeline {
 
                     }
                     
-                    import groovy.json.JsonSlurper
                     stage('process response') {
 
                         def slurper = new JsonSlurper()
